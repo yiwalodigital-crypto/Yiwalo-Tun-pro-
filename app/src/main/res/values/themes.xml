@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Thème principal : YIWALO TUN PRO -->
+    <style name="Theme.ProxyBox" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Arrière-plan -->
+        <item name="android:windowBackground">@color/background_dark</item>
+
+        <!-- Couleur du texte -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+
+        <!-- Barres système -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+
+        <!-- Apparence des icônes système -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+    </style>
+
+    <!-- Thème pour Android TV -->
+    <style name="Theme.ProxyBox.TV" parent="@style/Theme.Leanback.Browse">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/background_dark</item>
+
+    </style>
+
+</resources>

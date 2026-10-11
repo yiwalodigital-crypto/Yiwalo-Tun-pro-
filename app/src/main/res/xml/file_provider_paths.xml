@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Autoriser le partage des fichiers du dossier Download -->
+    <external-path
+        name="downloads"
+        path="Download/" />
+
+    <!-- Autoriser le partage des fichiers du dossier privé de l'application -->
+    <files-path
+        name="app_files"
+        path="." />
+
+    <!-- Autoriser le partage des fichiers temporaires de l'application -->
+    <cache-path
+        name="app_cache"
+        path="." />
+
+</paths>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/tv_item_focus"
+    android:focusable="true"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <!-- Indicateur du profil sélectionné -->
+    <View
+        android:id="@+id/viewSelectedIndicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="12dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <!-- Informations du profil -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:duplicateParentState="true" />
+
+        <!-- Protocole et latence -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvProtocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/tvLatency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/status_connected"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Badge du profil actif -->
+    <TextView
+        android:id="@+id/tvSelectedBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="✓ ACTIF"
+        android:textColor="@color/status_connected"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

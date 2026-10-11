@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fitsSystemWindows="true">
+
+    <!-- EN-TÊTE -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_dark"
+        android:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background_dark"
+            app:title="YIWALO TUN PRO"
+            app:titleTextColor="@color/white"
+            app:titleCentered="false" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- CONTENU PRINCIPAL -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="88dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
+
+                <!-- CARTE DE CONNEXION -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/background_card"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="18dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:id="@+id/statusDot"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/dot_grey" />
+
+                            <TextView
+                                android:id="@+id/tvStatus"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Non connecté"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/widget_bg"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="10dp"
+                                android:paddingBottom="5dp"
+                                android:text="YIWALO"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="11sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:text="Votre connexion, votre contrôle."
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="Gérez vos profils et vos paramètres VPN."
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnConnect"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:text="Connecter"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:backgroundTint="@color/button_primary"
+                            app:cornerRadius="14dp"
+                            app:iconGravity="textStart"
+                            app:iconTint="@color/white" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- SECTION ROUTAGE -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="PARAMÈTRES DE ROUTAGE"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.08" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/background_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerPreset"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:popupBackground="@color/background_card" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="8dp">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnRules"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Règles"
+                                android:textAllCaps="false"
+                                android:textColor="@color/status_connected"
+                                android:textSize="13sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnUpdateGeo"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="44dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Actualiser Geo"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- SECTION OUTILS -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="OUTILS RÉSEAU"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.08" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardBackgroundColor="@color/background_card"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnIpCheck"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Vérifier IP"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFC857"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnUpdateApp"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Mise à jour"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFF8FC7"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/border_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnTestConnection"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Tester"
+                                android:textAllCaps="false"
+                                android:textColor="@color/status_connected"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnPingAll"
+                                style="@style/Widget.MaterialComponents.Button.TextButton"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:minWidth="0dp"
+                                android:text="Tester les profils"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- SECTION PROFILS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="MES PROFILS"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.08" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VPN"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="130dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvProfiles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvEmpty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="28dp"
+                        android:text="Aucun profil pour le moment.\nAppuyez sur + pour ajouter une configuration."
+                        android:textColor="@color/text_muted"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- BARRE INFÉRIEURE FIXE -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:background="@color/background_dark"
+        android:elevation="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLocalServer"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="10dp"
+            android:text="Importer depuis le téléphone"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone"
+            app:cornerRadius="12dp"
+            app:strokeColor="@color/colorAccent" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:contentDescription="Ajouter une configuration VPN"
+            android:text="+ Ajouter un profil"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:backgroundTint="@color/button_primary"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

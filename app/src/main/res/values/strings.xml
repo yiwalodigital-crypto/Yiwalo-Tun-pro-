@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Identité YIWALO TUN PRO -->
+    <string name="app_name">YIWALO TUN PRO</string>
+    <string name="widget_description">Activer ou désactiver la connexion VPN</string>
+    <string name="widget_small_description">Bouton marche/arrêt du VPN</string>
+
+    <!-- Commun -->
+    <string name="save">Enregistrer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="close">Fermer</string>
+    <string name="later">Plus tard</string>
+    <string name="checking">Vérification…</string>
+
+    <!-- Connexion -->
+    <string name="connected">Connecté</string>
+    <string name="connecting">Connexion en cours…</string>
+    <string name="not_connected">Non connecté</string>
+    <string name="connection_failed">Échec de la connexion</string>
+    <string name="tap_to_connect">Appuyez pour vous connecter</string>
+    <string name="duration">Durée</string>
+    <string name="speed_test">Test de vitesse</string>
+    <string name="testing">Test en cours…</string>
+    <string name="speed_failed">Échec</string>
+    <string name="speed_result_mbps">↓ %.1f Mbps</string>
+    <string name="disconnect">Déconnecter</string>
+    <string name="connect">Connecter</string>
+
+    <!-- Écran principal -->
+    <string name="profiles_label">PROFILS</string>
+    <string name="no_profiles">Aucun profil pour le moment.\nAppuyez sur + pour ajouter une configuration.</string>
+    <string name="add_profile">Ajouter un profil</string>
+    <string name="reconnect_preset_toast">Reconnectez le VPN pour appliquer le préréglage</string>
+
+    <!-- Outils -->
+    <string name="routing_label">ROUTAGE</string>
+    <string name="network_label">RÉSEAU</string>
+    <string name="rules">Règles</string>
+    <string name="apps">Applications</string>
+    <string name="test">Tester</string>
+    <string name="ping_all">Tester tous les serveurs</string>
+    <string name="pinging">Test en cours…</string>
+    <string name="ip_check">Vérifier l’adresse IP</string>
+
+    <!-- Menu des profils -->
+    <string name="rename">Renommer</string>
+    <string name="copy_config">Copier la configuration</string>
+    <string name="share">Partager</string>
+    <string name="config_copied">Configuration copiée</string>
+    <string name="share_config">Partager la configuration</string>
+
+    <!-- Renommer un profil -->
+    <string name="rename_profile">Renommer le profil</string>
+    <string name="profile_name_hint">Nom du profil</string>
+
+    <!-- Supprimer un profil -->
+    <string name="delete_confirm">Supprimer « %s » ?</string>
+    <string name="deleted_toast">Supprimé : %s</string>
+
+    <!-- Règles de routage -->
+    <string name="routing_rules">Règles de routage</string>
+    <string name="none_no_custom_rules">Aucune règle personnalisée</string>
+    <string name="none">Aucun</string>
+    <string name="rules_count">%s (%d règles)</string>
+    <string name="no_rules_hint">Aucune règle personnalisée importée.\nFormat : JSON des règles de routage v2rayN.\nUtilisez Fichier ou URL ci-dessous pour importer.</string>
+    <string name="file">Fichier</string>
+    <string name="url">URL</string>
+    <string name="rule_added">Ensemble de règles « %s » ajouté !</string>
+    <string name="rule_invalid">Invalide : %s</string>
+    <string name="import_rules_url">Importer des règles depuis une URL</string>
+    <string name="url_placeholder">https://example.com/rules.json</string>
+    <string name="import_btn">Importer</string>
+    <string name="loading">Chargement…</string>
+    <string name="download_failed">Échec du téléchargement</string>
+    <string name="name_rule_set">Nommer cet ensemble de règles</string>
+    <string name="rule_name_hint">Nom de la règle</string>
+    <string name="default_rule_name">Règles personnalisées</string>
+    <string name="custom_rules_disabled">Règles personnalisées désactivées</string>
+    <string name="rule_activated">Activé : %s</string>
+
+    <!-- Vérification IP -->
+    <string name="ip_check_title">Vérification IP — %s</string>
+
+    <!-- Paramètres -->
+    <string name="settings">Paramètres</string>
+    <string name="group_vpn">VPN</string>
+    <string name="split_tunneling">Tunnel partagé</string>
+    <string name="split_tunneling_subtitle">Routage VPN par application</string>
+    <string name="group_updates">MISES À JOUR</string>
+    <string name="update_app">Mettre à jour l’application</string>
+    <string name="update_app_checking">Vérification…</string>
+    <string name="update_app_subtitle">v%s — appuyez pour vérifier</string>
+    <string name="update_found_no_apk">Mise à jour %s trouvée, mais aucun APK n’est joint</string>
+    <string name="on_latest_version">Vous utilisez la dernière version (%s)</string>
+    <string name="geo_profile">Profil géographique</string>
+    <string name="geo_profile_hint">Changer de profil met à jour les URL de téléchargement. Utilisez « Mettre à jour les données géographiques » ci-dessous pour télécharger les nouvelles données. Les préréglages de routage s’adaptent automatiquement aux catégories du profil actif.</string>
+    <string name="geo_profile_switched">Passage à %s — appuyez sur Mettre à jour les données géographiques pour télécharger</string>
+    <string name="geo_desc_loyalsoldier">Liste principalement axée sur la Chine, avec une bonne couverture russe. Comprend geosite:gfw, geoip:telegram et d’autres raccourcis. Bonne base pour router le trafic chinois et russe. Environ 10 Mo.</string>
+    <string name="geo_desc_v2fly">Liste officielle des mainteneurs de v2fly. Téléchargement plus léger, environ 2 Mo pour geosite. Les catégories category-ru, tld-ru, cn et category-ads-all sont disponibles, sans les ajouts personnalisés.</string>
+    <string name="geo_desc_runetfreedom">Liste axée sur la Russie, avec une couverture étendue et des mises à jour quotidiennes. Inclut des listes de sites bloqués en Russie et des catégories d’opérateurs russes. Téléchargement plus volumineux : environ 67 Mo pour geosite, soit six fois la taille de Loyalsoldier.</string>
+    <string name="update_geo">Mettre à jour les bases géographiques</string>
+    <string name="update_geo_subtitle">geoip.dat · geosite.dat</string>
+    <string name="group_about">À PROPOS</string>
+    <string name="about_subtitle">v%s · Client VPN open source</string>
+    <string name="github">GitHub</string>
+    <string name="github_url">github.com/DaveBugg/ProxyBox</string>
+    <string name="xray_core">Xray Core</string>
+    <string name="xray_subtitle">Propulsé par XTLS/Xray-core</string>
+    <string name="license">Licence</string>
+    <string name="license_value">GPLv3</string>
+    <string name="sub_user_agent">User-Agent des abonnements</string>
+    <string name="sub_ua_default">Par défaut (OkHttp)</string>
+    <string name="sub_ua_hint">En-tête User-Agent envoyé lors de la récupération des URL d’abonnement. Certains fournisseurs exigent l’identité d’une application spécifique.</string>
+    <string name="sub_ua_custom">Personnalisé :</string>
+    <string name="update_available">Mise à jour disponible</string>
+    <string name="new_version">Nouvelle version : v%s</string>
+    <string name="download_install">Télécharger et installer</string>
+    <string name="downloading_update">Téléchargement de la mise à jour…</string>
+
+    <!-- Tunnel partagé -->
+    <string name="bypass_selected">Contourner pour les applications sélectionnées</string>
+    <string name="only_selected">Uniquement les applications sélectionnées</string>
+    <string name="bypass_description">Les applications sélectionnées contourneront le VPN</string>
+    <string name="only_description">Seules les applications sélectionnées utiliseront le VPN (Android 11+)</string>
+    <string name="only_description_unsupported">« Uniquement les applications sélectionnées » nécessite Android 11 ou une version ultérieure</string>
+    <string name="search_apps">Rechercher des applications…</string>
+    <string name="hide_system_apps">Masquer les applications système</string>
+    <string name="loading_apps">Chargement des applications…</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Connexion VPN</string>
+    <string name="notif_connecting">Connexion en cours…</string>
+    <string name="notif_connected">YIWALO TUN PRO — Connecté</string>
+
+    <!-- Android TV -->
+    <string name="tv_title">YIWALO TUN PRO TV</string>
+    <string name="select_profile">Sélectionner un profil</string>
+    <string name="no_profiles_tv">Aucun profil. Cliquez sur Ajouter une configuration.</string>
+    <string name="add_config_phone">Ajouter une configuration depuis le téléphone</string>
+    <string name="test_connection">Tester la connexion</string>
+    <string name="routing_preset">Préréglage de routage</string>
+    <string name="add_via_phone">Ajouter depuis le téléphone</string>
+    <string name="no_rules_tv">Aucune règle personnalisée importée.\nFormat : JSON des règles de routage v2rayN.\nUtilisez « Ajouter depuis le téléphone » pour importer.</string>
+    <string name="delete_profile">Supprimer le profil</string>
+    <string name="add_profile_first">Ajoutez d’abord un profil</string>
+    <string name="mode_label">Mode :</string>
+    <string name="bypass_mode_btn">Contourner les applications sélectionnées (appuyez pour changer)</string>
+    <string name="only_mode_btn">Utiliser uniquement les applications sélectionnées (appuyez pour changer)</string>
+    <string name="no_file_manager">Aucun gestionnaire de fichiers disponible</string>
+    <string name="ip_regional">Régionale : %s</string>
+    <string name="ip_global">Globale : %s</string>
+
+    <!-- Langue -->
+    <string name="language">Langue</string>
+    <string name="language_system">Langue du système</string>
+    <string name="language_en">Anglais</string>
+    <string name="language_ru">Russe</string>
+
+    <!-- Ajouter un profil -->
+    <string name="paste_config_hint">Collez une URL de configuration ou un JSON</string>
+    <string name="enter_name_and_url">Saisissez un nom et une URL</string>
+    <string name="subscription_added">Abonnement ajouté</string>
+    <string name="config_added">Configuration ajoutée !</string>
+    <string name="invalid_config_format">Format de configuration invalide</string>
+    <string name="no_qr_found">Aucun code QR trouvé dans l’image</string>
+    <string name="error_reading_image">Erreur lors de la lecture de l’image</string>
+    <string name="scan_qr_prompt">Scanner le code QR du proxy</string>
+
+    <!-- Serveur local -->
+    <string name="config_via_phone">Configuration depuis le téléphone</string>
+    <string name="stop_server">Arrêter le serveur</string>
+    <string name="start_server">Démarrer le serveur</string>
+    <string name="server_stopped">Serveur arrêté</string>
+    <string name="server_start_failed">É

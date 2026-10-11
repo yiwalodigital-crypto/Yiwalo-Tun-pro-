@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_bg"
+    android:padding="8dp"
+    android:contentDescription="@string/widget_description"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_vpn_key"
+        android:contentDescription="@string/widget_small_description"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/widget_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/widget_icon"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/not_connected"
+        android:textColor="@color/text_primary"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+</RelativeLayout>

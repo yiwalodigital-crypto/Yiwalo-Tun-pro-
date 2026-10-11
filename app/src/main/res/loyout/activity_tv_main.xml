@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_dark"
+    android:focusable="false">
+
+    <!-- En-tête YIWALO TUN PRO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="14dp"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_title"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.04" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VPN • PROTECTION • CONNECTIVITÉ"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:layout_marginTop="3dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Zone principale -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Liste des profils -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_profile"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/background_card">
+
+                <ListView
+                    android:id="@+id/lvProfiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="6dp"
+                    android:divider="@color/border_color"
+                    android:dividerHeight="1dp"
+                    android:drawSelectorOnTop="false"
+                    android:listSelector="@android:color/transparent"
+                    android:focusable="true"
+                    android:nextFocusRight="@id/btnConnect" />
+
+                <TextView
+                    android:id="@+id/tvEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="@string/no_profiles_tv"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Panneau des commandes -->
+        <ScrollView
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:background="@color/background_card"
+            android:padding="16dp"
+            android:focusable="false"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- État de la connexion -->
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_connected"
+                    android:textColor="@color/status_disconnected"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Connexion principale -->
+                <Button
+                    android:id="@+id/btnConnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/connect"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/button_primary"
+                    android:textColor="@color/white"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <!-- Ajouter une configuration -->
+                <Button
+                    android:id="@+id/btnAddConfig"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/add_config_phone"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/text_primary"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <!-- Tests réseau -->
+                <Button
+                    android:id="@+id/btnPingAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/ping_all"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/colorAccent"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnTestConnection"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/test_connection"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/status_connected"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnSpeedTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/speed_test"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/status_connecting"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <!-- Options VPN -->
+                <Button
+                    android:id="@+id/btnSplitTunnel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/split_tunneling"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/colorAccent"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/border_color" />
+
+                <!-- Routage -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/routing_preset"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerPreset"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:popupBackground="@color/background_card_alt"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnRules"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/routing_rules"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/status_connected"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnIpCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/ip_check"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/status_connecting"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <!-- Données géographiques -->
+                <Button
+                    android:id="@+id/btnGeoProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/geo_profile"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/colorAccent"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnUpdateGeo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/update_geo"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/colorPrimary"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <!-- Mise à jour et langue -->
+                <Button
+                    android:id="@+id/btnUpdateApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/update_app"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/colorAccent"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+                <Button
+                    android:id="@+id/btnLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/language"
+                    android:textSize="13sp"
+                    android:background="@drawable/tv_btn_focus"
+                    android:textColor="@color/status_connecting"
+                    android:focusable="true"
+                    android:nextFocusLeft="@id/lvProfiles" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

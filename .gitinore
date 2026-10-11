@@ -1,0 +1,73 @@
+# ==========================================
+# YIWALO TUN PRO - Git Ignore
+# ==========================================
+
+# Built outputs
+*.iml
+.gradle/
+/build/
+/app/build/
+/captures/
+
+# Release APKs and Android App Bundles
+/app/release/
+*.apk
+*.aab
+*.ap_
+
+# Compiled files
+*.class
+*.dex
+
+# Local Android configuration
+local.properties
+
+# IDE settings
+/.idea/
+/.cursor/
+
+# AI tool configurations
+/.claude/
+/.serena/
+/.cbmignore
+/.codebase-memory/
+/CLAUDE.md
+/memory/
+
+# Backup files
+*.bak
+*.bak-*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Native build outputs
+.externalNativeBuild/
+.cxx/
+
+# Signing keys and sensitive signing configuration
+*.jks
+*.keystore
+keystore.properties
+
+# Heap dumps and crash logs
+*.hprof
+hs_err_pid*
+
+# Build logs
+build_out.txt
+*.log
+
+# Agent transcripts and terminal state
+/agent-transcripts/
+/terminals/
+/mcps/
+
+# Plan files
+*.plan.md
+/implementation_plan*
+
+# Generated HTML documentation
+/docs/*.html

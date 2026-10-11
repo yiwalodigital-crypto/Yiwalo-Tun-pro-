@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Couleurs classiques Android -->
+    <color name="purple_200">#FFB388FF</color>
+    <color name="purple_500">#FF795BFF</color>
+    <color name="purple_700">#FF5738CC</color>
+
+    <color name="teal_200">#FF42E8E0</color>
+    <color name="teal_700">#FF00B8A9</color>
+
+    <!-- Couleurs de base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Identité visuelle YIWALO TUN PRO -->
+    <color name="colorPrimary">#FF386BFF</color>
+    <color name="colorPrimaryDark">#FF172554</color>
+    <color name="colorAccent">#FF9B5CFF</color>
+
+    <!-- Arrière-plans -->
+    <color name="background_dark">#FF080D1A</color>
+    <color name="background_card">#FF111A2E</color>
+    <color name="background_card_alt">#FF18233B</color>
+
+    <!-- Texte -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#FFB7C2D8</color>
+    <color name="text_muted">#FF7F8CA8</color>
+
+    <!-- États de connexion -->
+    <color name="status_connected">#FF25D695</color>
+    <color name="status_connecting">#FFFFC857</color>
+    <color name="status_disconnected">#FFFF5C75</color>
+
+    <!-- Boutons et bordures -->
+    <color name="button_primary">#FF386BFF</color>
+    <color name="button_secondary">#FF9B5CFF</color>
+    <color name="border_color">#FF283653</color>
+
+</resources>

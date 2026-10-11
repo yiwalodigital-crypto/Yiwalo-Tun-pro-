@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+
+    <!-- Exclure les fichiers privés -->
+    <exclude
+        domain="file"
+        path="." />
+
+    <!-- Exclure les bases de données -->
+    <exclude
+        domain="database"
+        path="." />
+
+    <!-- Exclure les préférences -->
+    <exclude
+        domain="sharedpref"
+        path="." />
+
+    <!-- Exclure les fichiers internes de l'application -->
+    <exclude
+        domain="root"
+        path="." />
+
+    <!-- Exclure les fichiers externes sauvegardables -->
+    <exclude
+        domain="external"
+        path="." />
+
+</full-backup-content>
